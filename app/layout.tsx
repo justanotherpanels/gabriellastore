@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "./layout/navbar";
 import Footer from "./layout/footer";
 import { CSPostHogProvider } from "./layout/posthog-provider";
+import Script from "next/script";
+import seoConfig from "../config/seo.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,6 +23,9 @@ export const metadata: Metadata = {
   keywords: ["jasa install windows 10 semarang", "jasa instalasi linux ubuntu semarang", "install ulang laptop", "install laptop mahasiswa", "jasa instal laptop murah", "kota semarang"],
   alternates: {
     canonical: "https://gabriellstore.net"
+  },
+  verification: {
+    google: seoConfig.googleSiteVerification,
   },
   openGraph: {
     title: "Jasa Install Layanan Windows & Mac OS Semarang",
@@ -43,6 +48,19 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}>
       <body className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-blue-500/30 selection:text-blue-200 flex flex-col">
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${seoConfig.googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${seoConfig.googleAnalyticsId}');
+          `}
+        </Script>
         <CSPostHogProvider>
           <Navbar />
           {children}
