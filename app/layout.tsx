@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gabriellstore.net"),
   title: "Jasa Install Windows & Mac OS Terdekat di Semarang (Premium)",
   description: "Melayani jasa install ulang laptop segala merk. Windows 10/11, macOS, dan Distro Linux (Ubuntu). Solusi terbaik, aman data, dan khusus mahasiswa. Hubungi 0896-6008-1616.",
   keywords: ["jasa install windows 10 semarang", "jasa instalasi linux ubuntu semarang", "install ulang laptop", "install laptop mahasiswa", "jasa instal laptop murah", "kota semarang"],

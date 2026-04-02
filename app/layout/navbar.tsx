@@ -23,9 +23,11 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
           <Link href="/" className="hover:text-white transition-colors text-xs xl:text-sm">Home</Link>
+          <Link href="/page/jasa-install-windows" className="hover:text-white transition-colors text-xs xl:text-sm whitespace-nowrap">Install Windows</Link>
           <Link href="/page/jasa-install-macbook" className="hover:text-white transition-colors text-xs xl:text-sm whitespace-nowrap">Install Macbook</Link>
           <Link href="/page/jasa-install-mac-os-laptop-jadul" className="hover:text-white transition-colors text-xs xl:text-sm whitespace-nowrap">Install Macbook Tua</Link>
           <Link href="/page/jasa-install-linux-distro" className="hover:text-white transition-colors text-xs xl:text-sm whitespace-nowrap">Install Linux</Link>
+          <Link href="/page/jasa-maintenance-laptop" className="hover:text-white transition-colors text-xs xl:text-sm whitespace-nowrap">Jasa Maintenance</Link>
         </nav>
 
         <Link 
